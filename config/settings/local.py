@@ -1,18 +1,12 @@
 import os
-import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 環境変数を設定
-env = environ.Env(DEBUG=(bool,False),ALLOWED_HOSTS=(list,[]))
-env.read_env(os.path.join(BASE_DIR,'.env'))
-
-SECRET_KEY = env('SECRET_KEY')
-
-DEBUG = env('DEBUG')
-
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+# Djangoの環境変数
+SECRET_KEY='f(5rskl$q!0l2w96tii0t%i@x(f8c723+p=5a1p&_7*p#(+_fn'
+DEBUG=True
+ALLOWED_HOSTS=[]
 
 
 # Application definition
@@ -58,7 +52,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 DATABASES = {
-    'default':env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
