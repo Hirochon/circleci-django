@@ -1,0 +1,2 @@
+# circleci-django
+CircleCI上でDjangoやその他パッケージをpip installしつつ、migrateできることを確認するりぽじとりぃ
