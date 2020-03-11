@@ -5,16 +5,16 @@ executors:
     django-postgres:
         working_directory: ~/circleci-django
         docker:
-            - image: circleci/python:3.8.1
-                environment:
-                    PYTHONDONTWRITEBYTECODE: 1
-                    PYTHONUNBUFFERED: 1
-                    TZ: Asia/Tokyo
+            - image: circleci/python:3.7.4
+              environment:
+                PYTHONDONTWRITEBYTECODE: 1
+                PYTHONUNBUFFERED: 1
+                TZ: Asia/Tokyo
             - image: circleci/postgres:12.1
-                environment:
-                    POSTGRES_USER: postgres
-                    POSTGRES_PASSWORD: postgres
-                    TZ: Asia/Tokyo
+              environment:
+                POSTGRES_USER: postgres
+                POSTGRES_PASSWORD: postgres
+                TZ: Asia/Tokyo
 
 commands:
     chown_python_package:
