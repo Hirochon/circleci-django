@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Djangoの環境変数
 SECRET_KEY='f(5rskl$q!0l2w96tii0t%i@x(f8c723+p=5a1p&_7*p#(+_fn'
 DEBUG=True
-ALLOWED_HOSTS=[]
+ALLOWED_HOSTS=['*']
 
 
 # Application definition
