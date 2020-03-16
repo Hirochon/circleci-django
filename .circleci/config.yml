@@ -73,4 +73,8 @@ workflows:
     version: 2
     djangoflow:
         jobs:
-        - circleci-django
+        - circleci-django:
+            filters:
+                branches:
+                    ignore:
+                        - master
